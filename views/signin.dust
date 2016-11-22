@@ -6,12 +6,16 @@
 <div>
         <h1>Login</h1>
         <form method="post" action="/addUser">
-          <p><input id="email" type="text" name="logU" value="" placeholder="Username or Email"> </p>
-          <p><input id="pwd" type="password" name="logP" value="" placeholder="Password"></p>
+          <p><input id="email" type="text" name="logU" value="" placeholder="Username or Email" required=""> </p>
+          <p><input id="pwd" type="password" name="logP" value="" placeholder="Password" required></p>
           <p><input type="submit" name="commit" value="Login"></p>
         </form>
 </div>
 
+<div>
+  <strong> {err} </strong>
+
+</div>
 
 
 

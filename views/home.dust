@@ -82,7 +82,7 @@
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a onclick="window.location.href='index.html'" data-transition="fade" data-theme="c" data-icon="power">
+                    <a href="/" data-transition="fade" data-theme="c" data-icon="power">
                         LOGOUT
                     </a>
                 </li>

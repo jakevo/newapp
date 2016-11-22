@@ -42,6 +42,11 @@ app.get('/signin', function(req, res) {
 
   res.render('signin');
 });
+app.get('/addUser', function(req, res) {
+
+  res.render('home');
+});
+
 app.post('/addUser', function(req, res) {
   pg.connect(connect, function (err, client, done) {
     if(err) {
@@ -57,12 +62,9 @@ app.post('/addUser', function(req, res) {
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
           return res.render('home', {user: result.rows[i].email});
-          console.log("pass");
-        } else {
-          console.log("fail");
-          //res.render('signin');
         }
       }
+      res.render('signin', {err: "Please check your username or password!"});
       //res.render('signin');
       done();
 
