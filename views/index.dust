@@ -17,11 +17,8 @@
                     </a>
                 </li>
                 <li>
-<<<<<<< HEAD
-                    <a href="signup" data-transition="fade" data-theme="" data-icon="">
-=======
+
                     <a href="/signup" data-transition="fade" data-theme="" data-icon="">
->>>>>>> e62444f8e989f570e7d72dc9e4b3d5262bb96a11
                         SIGN UP
                     </a>
                 </li>
