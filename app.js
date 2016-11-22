@@ -54,7 +54,7 @@ app.post('/addUser', function(req, res) {
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
           res.sendfile(html_dir + 'home.html');
         } else {
-          res.render('signin',{title: 'Invalid username or password!'});
+          res.render('signin');
         }
       }
       //res.render('signin');
