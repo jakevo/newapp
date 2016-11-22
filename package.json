@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "leading humanity",
   "main": "app.js",
-  "engines": {
-    "npm": "2.1.x",
   "dependencies": {
     "body-parser": "*",
     "consolidate": "*",
