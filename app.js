@@ -34,7 +34,6 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 app.get('/', function(req, res) {
   res.render('index');
-<<<<<<< HEAD
 });
 app.get('/home', function(req, res) {
   res.sendfile(html_dir + 'home.html');
