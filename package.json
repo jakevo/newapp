@@ -3,22 +3,22 @@
   "version": "1.0.0",
   "description": "leading humanity",
   "main": "app.js",
+  "engines": {
+    "npm": "2.1.x",
   "dependencies": {
-    "express": "^3.4.8",
     "body-parser": "*",
     "consolidate": "*",
     "dust": "*",
     "dustjs-helpers": "*",
     "dustjs-linkedin": "*",
+    "express": "^3.21.2",
     "pg": "^6.1.0"
   },
   "scripts": {
-    "start": "node your-script.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jpon1/LeadingHumanityA6.git"
