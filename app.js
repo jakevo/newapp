@@ -32,7 +32,9 @@ app.use(express.bodyParser());
 
 app.use(bodyParser.urlencoded({ extended: false}));
 
-
+app.get('/', function(req, res) {
+  res.render('index');
+});
 app.get('/home', function(req, res) {
   res.sendfile(html_dir + 'home.html');
 });
@@ -54,7 +56,8 @@ app.post('/addUser', function(req, res) {
         console.log(req.body.logU);
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
-          console.log("pass!");
+          //res.sendfile(html_dir + 'home.html');
+          console.log("pass");
         } else {
           console.log("fail");
           res.render('signin');
