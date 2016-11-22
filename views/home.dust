@@ -1,0 +1,94 @@
+{>"layout" /}
+
+{<body}
+<div data-role="page" data-control-title="home" id="page1">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3 class="ui-title">
+            LEADING HUMANITY
+        </h3>
+    </div>
+    <div role="main" class="ui-content">
+        <div id="owner" style="text-align: center;">
+            {user}
+        </div>
+        <iframe data-controltype="youtube" id="youtube1" type="text/html" width="100%"
+        height="180px" src="https://www.youtube.com/embed/tRRkX01hMJY" frameborder="0">
+        </iframe>
+        <div data-controltype="textblock">
+            <p style="text-align: center;" data-mce-style="text-align: center;">
+                <span style="font-family: impact, chicago;" data-mce-style="font-family: impact, chicago;">
+                    <strong>
+                        <span style="color: rgb(255, 153, 0);" data-mce-style="color: #ff9900;">
+                            ﻿﻿
+                        </span>
+                        <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
+                            Welcome to LEADING HUMANITY&nbsp;
+                        </span>
+                    </strong>
+                </span>
+                <br>
+                <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
+                    <strong>
+                        Do you like making differences?&nbsp;
+                    </strong>
+                </span>
+                <br>
+                <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
+                    <strong>
+                        Become a Scientist and tackle questions of all sorts!
+                        <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
+                            <br>
+                        </span>
+                    </strong>
+                </span>
+            </p>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="window.location.href='create.html'" data-transition="fade" data-theme="c" data-icon="plus">
+                        CREATE NEW PROJECT
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="window.location.href='contribute.html'" data-transition="fade" data-theme="c" data-icon="edit">
+                        CONTRIBUTE DATA
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="window.location.href='analyze.html'" data-transition="slidedown" data-theme="c" data-icon="check">
+                        ANALYZE DATA
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="window.location.href='myprojects.html'" data-transition="fade" data-theme="h" data-icon="gear">
+                        MY PROJECTS
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="window.location.href='index.html'" data-transition="fade" data-theme="c" data-icon="power">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{/body}
