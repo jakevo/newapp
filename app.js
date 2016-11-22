@@ -56,8 +56,8 @@ app.post('/addUser', function(req, res) {
         console.log(req.body.logU);
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
-          //res.sendfile(html_dir + 'home.html');
-          return console.log("pass");
+          return res.sendfile(html_dir + 'home.html');
+          console.log("pass");
         } else {
           console.log("fail");
           res.render('signin');
