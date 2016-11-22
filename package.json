@@ -1,0 +1,32 @@
+{
+  "name": "leadinghumanity8",
+  "version": "1.0.0",
+  "description": "leading humanity",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^3.4.8",
+    "body-parser": "*",
+    "consolidate": "*",
+    "dust": "*",
+    "dustjs-helpers": "*",
+    "dustjs-linkedin": "*",
+    "pg": "^6.1.0"
+  },
+  "scripts": {
+    "start": "node your-script.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpon1/LeadingHumanityA6.git"
+  },
+  "author": "Jake Vo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpon1/LeadingHumanityA6/issues"
+  },
+  "homepage": "https://github.com/jpon1/LeadingHumanityA6#readme"
+}

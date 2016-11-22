@@ -1,0 +1,21 @@
+{>"layout" /}
+
+{<body}
+<div>
+      <h1>Sign-up</h1>
+
+      <form method="post" action="/add">
+        <p><input id="email" type="text" name="email" value="" placeholder="Username or Email"> </p>
+
+        <p><input id="pwd" type="password" name="password" value="" placeholder="Password"></p>
+
+        <p><input type="submit" name="commit" value="Login"></p>
+
+        <a href="/" data-transition="fade" data-theme="" data-icon="<=">
+            GO BACK
+        </a>
+      </form>
+</div>
+
+
+{/body}
