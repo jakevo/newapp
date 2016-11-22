@@ -60,7 +60,7 @@ app.post('/addUser', function(req, res) {
           console.log("pass");
         } else {
           console.log("fail");
-          res.render('signin');
+          //res.render('signin');
         }
       }
       //res.render('signin');
