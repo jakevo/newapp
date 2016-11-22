@@ -36,7 +36,7 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 app.get('/home', function(req, res) {
-  res.sendfile(html_dir + 'home.html');
+  res.render('home');
 });
 app.get('/signin', function(req, res) {
 
@@ -56,7 +56,7 @@ app.post('/addUser', function(req, res) {
         console.log(req.body.logU);
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
-          return res.sendfile(html_dir + 'home.html');
+          return res.render('home', {user: result.rows[i].email});
           console.log("pass");
         } else {
           console.log("fail");
