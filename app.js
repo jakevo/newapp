@@ -51,6 +51,10 @@ app.post('/addUser', function(req, res) {
       //console.log(result.rows);
       //res.render('index');
       for (var i = 0; i < result.rows.length; i++) {
+        console.log(result.rows[i].email);
+        console.log(result.rows[i].password);
+        console.log(req.body.logU);
+        console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
           res.sendfile(html_dir + 'home.html');
         } else {
