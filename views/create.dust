@@ -1,0 +1,167 @@
+{>"layout" /}
+
+
+{<body}
+
+<script>
+  function goBack() {
+    window.history.back()
+  };
+
+  function validate() {
+    var projectName = document.getElementById("pName");
+    var hypothesis = document.getElementById("hypo");
+    var question1 = document.getElementById("ques1");
+    var question2 = document.getElementById("ques2");
+    var question3 = document.getElementById("ques3");
+    var question3 = document.getElementById("ques4");
+    var question4 = document.getElementById("ques5");
+
+    var e = document.getElementById("category");
+    var category = e.options[e.selectedIndex].value;
+
+    if ((projectName.value = "") || (hypothesis.value = "")) {
+      alert("Project name and Hypothesis fields cannot be blank!");
+      return false;
+    }
+
+  };
+
+
+</script>
+
+
+<div data-role="page" data-control-title="analyze" id="page8">
+  <div data-theme="b" data-role="header">
+    <h1 onclick="window.location.href='/home'" class="ui-title">
+      CITIZEN SCIENTIST
+    </h1>
+    <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
+      Home
+    </a>
+  </div>
+  <div role="main" class="ui-content">
+    <div data-controltype="textblock">
+      <h1 data-mce-style="text-align: center;" style="text-align: center;">
+        <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+          <b>
+            CREATE NEW PROJECT
+          </b>
+        </span>
+      </h1>
+
+      <h4 data-mce-style="text-align: center;" style="text-align: center;">
+        <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+          <b>
+            MAKE A NEW PROJECT FOR A NEW SCIENTIFIC QUESTION
+          </b>
+        </span>
+      </h4>
+    </div>
+    <form method="post" action="/createP">
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="textinput1">
+          <b>
+            Project Name
+          </b>
+        </label>
+        <input name="pName" id="pName" placeholder="" type="text">
+      </div>
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="category">
+          <b>
+            Category:
+          </b>
+
+        </label>
+        <select id="category">
+          <option value="social">Social</option>
+          <option value="health">Health</option>
+          <option value="environment">Environment</option>
+          <option value="science">Science</option>
+        </select>
+      </div>
+
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="textinput4">
+          <b>
+            Hypothesis:
+          </b>
+        </label>
+        <input name="hypo" id="hypo" placeholder="" type="text">
+      </div>
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="question1">
+          <b>
+            Question 1:
+          </b>
+        </label>
+        <input name="ques1" id="ques1" placeholder="" type="text">
+      </div>
+
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="question2">
+          <b>
+            Question 2:
+          </b>
+        </label>
+        <input name="ques2" id="ques2" placeholder=""  type="text">
+      </div>
+
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="question3">
+          <b>
+            Question 3:
+          </b>
+        </label>
+        <input name="ques3" id="ques3" placeholder="" type="text">
+      </div>
+
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="question4">
+          <b>
+            Question 4:
+          </b>
+        </label>
+        <input name="ques4" id="ques4" placeholder="" type="text">
+      </div>
+
+      <div class="ui-field-contain" data-controltype="textinput">
+        <label for="question5">
+          <b>
+            Question 5:
+          </b>
+        </label>
+        <input name="ques5" id="ques5" placeholder=""  type="text">
+      </div>
+      <div data-role="navbar" data-iconpos="top">
+        <ul>
+          <li>
+            <a onclick="goBack()" data-transition="fade" data-theme="" data-icon="">
+              BACK
+            </a>
+          </li>
+
+          <li>
+            <input type="submit" name="commit" value="Create" data-transition="fade" data-theme="" data-icon="">
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </form>
+  <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="/create" data-icon="plus">Create</a></li>
+        <li><a href="/contribute" data-icon="edit">Contribute</a></li>
+        <li><a href="/analyze" data-icon="check">Analyze</a></li>
+        <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
+        <li><a onclick="window.location.href='/index'" data-icon="power">Logout</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div>
+
+
+{/body}

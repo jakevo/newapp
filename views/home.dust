@@ -1,94 +1,83 @@
 {>"layout" /}
 
+
+
 {<body}
+
 <div data-role="page" data-control-title="home" id="page1">
-    <div data-theme="b" data-role="header" data-position="fixed">
-        <h3 class="ui-title">
-            LEADING HUMANITY
-        </h3>
-    </div>
+    <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
+        <h1 onclick="window.location.href='/home'" class="ui-title">
+            CITIZEN SCIENTIST
+        </h1>
+        <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
+            Home
+        </a>
+</div>
+
     <div role="main" class="ui-content">
         <div id="owner" style="text-align: center;">
-            {user}
+
         </div>
-        <iframe data-controltype="youtube" id="youtube1" type="text/html" width="100%"
-        height="180px" src="https://www.youtube.com/embed/tRRkX01hMJY" frameborder="0">
-        </iframe>
         <div data-controltype="textblock">
-            <p style="text-align: center;" data-mce-style="text-align: center;">
+            <h2>
+            <p style="text-align: center;" data-mce-style="text-align: center;" >
                 <span style="font-family: impact, chicago;" data-mce-style="font-family: impact, chicago;">
                     <strong>
-                        <span style="color: rgb(255, 153, 0);" data-mce-style="color: #ff9900;">
-                            ﻿﻿
-                        </span>
-                        <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
-                            Welcome to LEADING HUMANITY&nbsp;
+                        <span style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;"> ﻿﻿
+                             Welcome CITIZEN SCIENTIST
                         </span>
                     </strong>
                 </span>
                 <br>
-                <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
-                    <strong>
-                        Do you like making differences?&nbsp;
-                    </strong>
-                </span>
-                <br>
-                <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
-                    <strong>
-                        Become a Scientist and tackle questions of all sorts!
-                        <span style="font-family: 'comic sans ms', sans-serif;" data-mce-style="font-family: 'comic sans ms', sans-serif;">
-                            <br>
-                        </span>
-                    </strong>
-                </span>
+            </p>
+            </h2>
+        </div>
+ <div data-controltype="textblock">
+            <p style="text-align: center;" >
+                        Engage in existing Research Projects you find interesting or create your own Research Project!
             </p>
         </div>
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a onclick="window.location.href='create.html'" data-transition="fade" data-theme="c" data-icon="plus">
-                        CREATE NEW PROJECT
-                    </a>
-                </li>
-            </ul>
+ <div data-controltype="textblock">
+            <p style="text-align: center;" >
+                        All the tools you need are at your fingertips, become a Scientist and tackle questions of all sorts!
+            </p>
         </div>
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a onclick="window.location.href='contribute.html'" data-transition="fade" data-theme="c" data-icon="edit">
-                        CONTRIBUTE DATA
-                    </a>
-                </li>
-            </ul>
+
+
+        <div data-controltype="textblock">
+
+          <b>
+            <p style="text-align: center;" >
+              Select a Project Category
+            </p>
+          </b>
         </div>
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a onclick="window.location.href='analyze.html'" data-transition="slidedown" data-theme="c" data-icon="check">
-                        ANALYZE DATA
-                    </a>
-                </li>
-            </ul>
+
+        <div align="center">
+        <img onclick=window.location.href='/social' src="images/social.png" alt="Data From Survey Responses"
+                 width="45%" height="50%">
+        <img onclick="window.location.href='/images/health'" src="images/health.png" alt="Data From Survey Responses"
+                 width="45%" height="50%">
+        <img onclick="window.location.href='/images/environment'" src="images/environment.png" alt="Data From Survey Responses"
+                 width="45%" height="50%">
+        <img onclick="window.location.href='/images/science'" src="images/science.png" alt="Data From Survey Responses"
+                 width="45%" height="50%">
+
         </div>
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a onclick="window.location.href='myprojects.html'" data-transition="fade" data-theme="h" data-icon="gear">
-                        MY PROJECTS
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a href="/" data-transition="fade" data-theme="c" data-icon="power">
-                        LOGOUT
-                    </a>
-                </li>
-            </ul>
-        </div>
+
+        <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="/create" data-icon="plus">Create</a></li>
+                    <li><a href="/contribute" data-icon="edit">Contribute</a></li>
+                    <li><a href="/analyze" data-icon="check">Analyze</a></li>
+                    <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
+                    <li><a onclick="window.location.href='/index'" data-icon="power">Logout</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
     </div>
 </div>
+
 
 {/body}

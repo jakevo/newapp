@@ -3,58 +3,127 @@
 {<body}
 
 <div data-role="page" data-control-title="index" id="page3">
-    <div data-theme="b" data-role="header">
-        <h1 class="ui-title">
-            LEADING HUMANITY
-        </h1>
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <header onclick="window.location.href='/index'" class="ui-title">
+            CITIZEN SCIENTIST
+        </header>
+        <a onclick="window.location.href='/index'" data-transition="fade" data-icon="home">
+            Home
+        </a>
     </div>
-    <div role="main" class="ui-content">
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a href="signin" data-transition="fade" data-theme="" data-icon="">
-                        SIGN IN
-                    </a>
-                </li>
-                <li>
 
-                    <a href="/signup" data-transition="fade" data-theme="" data-icon="">
-                        SIGN UP
-                    </a>
-                </li>
-            </ul>
+    <div role="main" class="ui-content">
+
+    <h3 data-mce-style="text-align: center;" style="text-align: center;">
+        <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+            <b>
+                FEATURES
+            </b>
+        </span>
+    </h3>
+
+        <div class="container">
+            <br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <img src="/images/timeData.png" alt="Chania" width="100%" height="100%">
+                        <div class="carousel-caption">
+                            <h3 style="background-color: black">Create New Research Project</h3>
+                            <p style="background-color: black">You can design your own research project and execute it by uploading a google form that will serve as a survey.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/timeData.png" alt="Chania" width="100%" height="100%">
+                        <div class="carousel-caption">
+                            <h3 style="background-color: black">Contribute Data to Existing Projects</h3>
+                            <p style="background-color: black">You can answer the surveys other people have created for their projects.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/timeData.png" alt="Flower" width="100%" height="100%">
+                        <div class="carousel-caption">
+                            <h3 style="background-color: black">Analyze Data of an Existing Project</h3>
+                            <p style="background-color: black">You can review the curent data for existing projects and provide feedback based on the hypothesis and the data for that particular project.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/timeData.png" alt="Flower" width="100%" height="100%">
+                        <div class="carousel-caption">
+                            <h3 style="background-color: black">Monitor My Projects</h3>
+                            <p style="background-color: black">You can view the data from other users answering the survey you created when you made a new project. You can also track other projects you are interested in and be able to view their data.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
-        <iframe data-controltype="youtube" id="youtube1" type="text/html" width="100%"
-        height="180px" src="https://www.youtube.com/embed/tRRkX01hMJY" frameborder="0">
-        </iframe>
         <div data-controltype="textblock">
             <p style="text-align: center;">
                 <span>
                     <strong>
                         <span>
-                        </span>
-                        <span>
-                            Welcome to LEADING HUMANITY&nbsp;
+                            Welcome Citizen Scientist!&nbsp;
                         </span>
                     </strong>
                 </span>
                 <br>
+            </p>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: center;">
                 <span>
-                    <strong>
-                        Do you like making differences?&nbsp;
-                    </strong>
+                    Do you like making differences?&nbsp;
                 </span>
                 <br>
                 <span>
-                    <strong>
-                        Become a scientist and tackle questions of all sorts!
-                    </strong>
+                    Become a scientist
+                    <br>
+                    Connect with others with similar interests,
+                    <br>
+                    and tackle questions that will
+                    revolutionize our human understanding!
+                    <br>
                 </span>
             </p>
         </div>
+        <div data-role="navbar" data-iconpos="top">
+
+                    <a onclick="window.location.href='/signin'" data-transition="fade" data-theme="" data-icon="">
+                        SIGN IN
+                    </a>
+
+        </div>
+        <div data-role="navbar">
+            <a onclick="window.location.href='/signup'" data-transition="fade" data-theme="" data-icon="">
+                SIGN UP
+            </a>
+        </div>
     </div>
 </div>
-
 
 
 

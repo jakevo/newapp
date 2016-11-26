@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.css" rel="stylesheet">
+  <link href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
+
+  <script type='text/javascript' src="create.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" data-control-title="answer" id="page7">
+    <div data-theme="b" data-role="header">
+        <h1 onclick="window.location.href='/home'" class="ui-title">
+            CITIZEN SCIENTIST
+        </h1>
+        <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
+            Home
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <h1 data-mce-style="text-align: center;" style="text-align: center;">
+                <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+                    <b>
+                        MY PROJECTS
+                    </b>
+                </span>
+            </h1>
+
+            <h4 data-mce-style="text-align: center;" style="text-align: center;">
+                <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+                    <b>
+                        MY CREATED AND JOINED PROJECTS AT A GLANCE
+                    </b>
+                </span>
+            </h4>
+        </div>
+        <div data-controltype="textblock">
+            <p>
+                <b>
+                    MY CREATED PROJECTS: &nbsp;
+                </b>
+            </p>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="popup()" id="p1" data-transition="fade" data-theme="" data-icon=""> </a>
+                </li>
+            </ul>
+        </div>
+         <div data-controltype="textblock">
+             <p>
+                 <b>
+                     MY JOINED PROJECTS: &nbsp;
+                 </b>
+             </p>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="window.location.href='/timeData'" data-transition="fade" data-theme="" data-icon="">
+                        Citizen Science (CSTIME)
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <br/>
+
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a onclick="window.location.href='/home'" data-transition="fade" data-theme="" data-icon="">
+                        BACK
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="/create" data-icon="plus">Create</a></li>
+                    <li><a href="/contribute" data-icon="edit">Contribute</a></li>
+                    <li><a href="/analyze" data-icon="check">Analyze</a></li>
+                    <li><a href="/myprojects" data-icon="gear" class="ui-btn-active ui-state-persist">My Projects</a></li>
+                    <li><a onclick="window.location.href='/index'" data-icon="power">Logout</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+</div>
+
+<script>
+
+$("#p1").text(localStorage.getItem("projectName"));
+function popup() {
+  alert("No data is available yet because you just created this project!");
+}
+
+</script>
+
+</body>
+</html>

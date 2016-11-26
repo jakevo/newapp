@@ -15,7 +15,7 @@ var pg   = require('pg');
 var app = express();
 var html_dir = './html/';
 var connect = "postgres://wkffstrhlpupdr:DVb427-jc3Z7gnunzpVeA6XFji@ec2-54-221-244-62.compute-1.amazonaws.com:5432/d3vt508c43cdvj?ssl=true"
-
+var name;
 
 //var pool = new pg.Pool(config);&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
 app.engine('dust', cons.dust);
@@ -30,7 +30,16 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use(express.bodyParser());
 
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: true}));
+
+
+app.get('/create', function(req, res) {
+  res.render('create', {user: name});
+});
+
+app.get('/social', function(req, res) {
+  res.render('social', {user: name});
+});
 
 app.get('/', function(req, res) {
   res.render('index');
@@ -47,6 +56,21 @@ app.get('/addUser', function(req, res) {
   res.render('home');
 });
 
+app.get('/contribute', function(req,res) {
+  res.render('contribute');
+});
+
+app.get('/analyze', function(req,res) {
+  res.render('analyze');
+});
+
+
+app.get('/signup', function(req, res) {
+
+  res.render('signup');
+
+});
+
 app.post('/addUser', function(req, res) {
   pg.connect(connect, function (err, client, done) {
     if(err) {
@@ -61,10 +85,12 @@ app.post('/addUser', function(req, res) {
         console.log(req.body.logU);
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
+          name = result.rows[i].email;
           return res.render('home', {user: result.rows[i].email});
         }
       }
-      res.render('signin', {err: "Please check your username or password!"});
+      res.render('signin');
+
       //res.render('signin');
       done();
 
@@ -73,15 +99,25 @@ app.post('/addUser', function(req, res) {
       }
     });
   });
-
 });
 
-app.get('/signup', function(req, res) {
+//table project
 
-  res.render('signup');
-
+app.post('/createP', function(req, res) {
+  pg.connect(connect, function (err, client, done) {
+    if(err) {
+      return console.error('error fetching client from pool', err);
+    }
+    client.query("INSERT INTO question (owner, projname, hypothesis, quest1, quest2, quest3, quest4, quest5) VALUES" +
+    "($1, $2, $3, $4, $5, $6, $7, $8)",
+    [name, req.body.pName, req.body.hypo, req.body.ques1,req.body.ques2,req.body.ques3,req.body.ques4,req.body.ques5]);
+    done();
+    res.render('home');
+    if(err) {
+      return console.error('error running query', err);
+    }
+  });
 });
-
 
 
 app.post('/add', function(req, res) {
@@ -100,96 +136,6 @@ app.post('/add', function(req, res) {
 });*/
 
 app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  console.log("Express server listening on port %d in %s mode",
+  this.address().port, app.settings.env);
 });
-
-
-/*
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(express.cookieParser('Intro HCI secret key'));
-app.use(express.session());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
-*/
-/*
-var html_dir = './html/';
-
-app.get('/index', function(req, res) {
-res.sendfile(html_dir + 'index.html');
-=======
-
-
-
-});
-  app.get('/signin', function(req, res) {
-    pg.connect(connect, function (err, client, done) {
-      if(err) {
-        return console.error('error fetching client from pool', err);
-      }
-      client.query('SELECT * FROM users', function(err, result) {
-        //console.log(result.rows);
-        //res.render('index');
-        res.render('signin', {jake: result.rows});
-        done();
-
-        if(err) {
-          return console.error('error running query', err);
-        }
-      });
-    });
-
-  });
-
-  app.get('/signup', function(req, res) {
-    res.sendfile(html_dir + 'signup.html');
-  });
-  app.get('/home', function(req, res) {
-    res.sendfile(html_dir + 'home.html');
-  });
-  app.listen(3000, function() {
-    console.log('Server Started On Port 3000');
-  });
-
-
-  /*
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.json());
-  app.use(express.urlencoded());
-  app.use(express.methodOverride());
-  app.use(express.cookieParser('Intro HCI secret key'));
-  app.use(express.session());
-  app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
-  */
-  /*
-  var html_dir = './html/';
-
-  app.get('/index', function(req, res) {
-  res.sendfile(html_dir + 'index.html');
->>>>>>> e62444f8e989f570e7d72dc9e4b3d5262bb96a11
-});
-
-
-// routes to serve the static HTML files
-app.get('/home', function(req, res) {
-res.sendfile(html_dir + 'home.html');
-});
-// Note: route names need not match the file name
-app.get('/signin', function(req, res) {
-res.sendfile(html_dir + 'signin.html');
-});
-
-// Add routes here
-
-//app.get('/signin', signin.view);
-// Example route
-// app.get('/users', user.list);
-
-http.createServer(app).listen(app.get('port'), function(){
-console.log('Express server listening on port ' + app.get('port'));
-});*/
