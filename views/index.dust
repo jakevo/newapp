@@ -2,6 +2,31 @@
 
 {<body}
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.css" rel="stylesheet">
+  <link href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+
 <div data-role="page" data-control-title="index" id="page3">
     <div data-theme="b" data-role="header" data-position="fixed">
         <header onclick="window.location.href='/index'" class="ui-title">
@@ -13,9 +38,9 @@
     </div>
 
     <div role="main" class="ui-content">
-
+    
     <h3 data-mce-style="text-align: center;" style="text-align: center;">
-        <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+        <span style="font-family: 'Times New Roman'; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
             <b>
                 FEATURES
             </b>
@@ -37,34 +62,26 @@
                 <div class="carousel-inner" role="listbox">
 
                     <div class="item active">
-                        <img src="/images/timeData.png" alt="Chania" width="100%" height="100%">
+                        <img src="/images/slide1.png" alt="Chania" width="100%" height="100%">
                         <div class="carousel-caption">
-                            <h3 style="background-color: black">Create New Research Project</h3>
-                            <p style="background-color: black">You can design your own research project and execute it by uploading a google form that will serve as a survey.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="/images/timeData.png" alt="Chania" width="100%" height="100%">
+                        <img src="/images/slide2.png" alt="Chania" width="100%" height="100%">
                         <div class="carousel-caption">
-                            <h3 style="background-color: black">Contribute Data to Existing Projects</h3>
-                            <p style="background-color: black">You can answer the surveys other people have created for their projects.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="/images/timeData.png" alt="Flower" width="100%" height="100%">
+                        <img src="/images/slide3.png" alt="Flower" width="100%" height="100%">
                         <div class="carousel-caption">
-                            <h3 style="background-color: black">Analyze Data of an Existing Project</h3>
-                            <p style="background-color: black">You can review the curent data for existing projects and provide feedback based on the hypothesis and the data for that particular project.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="/images/timeData.png" alt="Flower" width="100%" height="100%">
+                        <img src="/images/slide4.png" alt="Flower" width="100%" height="100%">
                         <div class="carousel-caption">
-                            <h3 style="background-color: black">Monitor My Projects</h3>
-                            <p style="background-color: black">You can view the data from other users answering the survey you created when you made a new project. You can also track other projects you are interested in and be able to view their data.</p>
                         </div>
                     </div>
 
@@ -111,7 +128,7 @@
             </p>
         </div>
         <div data-role="navbar" data-iconpos="top">
-
+       
                     <a onclick="window.location.href='/signin'" data-transition="fade" data-theme="" data-icon="">
                         SIGN IN
                     </a>
@@ -124,6 +141,84 @@
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+
+var  count1 = 0;
+var  count2 = 0;
+var  count3 = 0;
+var  count4 = 0;
+
+$('#createP').hide();
+$('#contributeP').hide();
+$('#analyzeP').hide();
+$('#monitorP').hide();
+
+
+function showCreate() {
+
+    count1 = count1 + 1;
+    if ((count1 % 2) == 0) {
+      return $('#createP').hide();
+    }
+
+    $('#createP').show();
+    $('#contributeP').hide();
+    $('#analyzeP').hide();
+    $('#monitorP').hide();
+};
+
+function showContribute() {
+
+    count2 = count2 + 1;
+    if ((count2 % 2) == 0) {
+      count1 = 0;
+      return $('#contributeP').hide();
+    }
+    $('#createP').hide();
+    $('#contributeP').show();
+    $('#analyzeP').hide();
+    $('#monitorP').hide();
+    //count1 = 0;
+};
+function showAnalyze() {
+
+    count3 = count3 + 1;
+    if ((count3 % 2) == 0) {
+      count2 = 0;
+      return $('#analyzeP').hide();
+    }
+    $('#createP').hide();
+    $('#contributeP').hide();
+    $('#analyzeP').show();
+    $('#monitorP').hide();
+    //count2 = 0;
+};
+function showMonitor() {
+
+    count4 = count4 + 1;
+     
+    if ((count4 % 2) == 0) {
+      return $('#monitorP').hide();
+    }
+    $('#createP').hide();
+    $('#contributeP').hide();
+    $('#analyzeP').hide();
+    $('#monitorP').show();
+    //count4 = 0;
+};
+
+</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+
+</body>
+</html>
 
 
 

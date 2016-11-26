@@ -71,6 +71,48 @@ app.get('/signup', function(req, res) {
 
 });
 
+app.get('/health', function(req, res) {
+
+  res.render('health');
+
+});
+
+app.get('/science', function(req, res) {
+
+  res.render('science');
+
+});
+
+app.get('/environment', function(req, res) {
+
+  res.render('environment');
+
+});
+
+app.get('/health', function(req, res) {
+
+  res.render('health');
+
+});
+
+app.get('/leyout', function(req, res) {
+
+  res.render('leyout');
+
+});
+
+app.get('/forgotpassword', function(req, res) {
+
+  res.render('forgotpassword');
+
+});
+
+app.get('/myprojects', function(req, res) {
+
+  res.render('myprojects');
+
+});
+
 app.post('/addUser', function(req, res) {
   pg.connect(connect, function (err, client, done) {
     if(err) {

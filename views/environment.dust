@@ -4,7 +4,6 @@
 
 {<body}
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +46,7 @@
                 <span style="font-family: impact, chicago;" data-mce-style="font-family: impact, chicago;">
                     <strong>
                         <span style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;"> ﻿﻿
-                            Current Science Projects
+                            Current Environment Projects
                         </span>
                     </strong>
                 </span>
@@ -56,7 +55,7 @@
             </h2>
         </div>
         <div align="center" >
-        <img src="images/scienceCopy.png" alt="Data From Survey Responses"
+        <img src="images/environmentCopy.png" alt="Data From Survey Responses"
                  width="65%" height="65%">
         </div>
         <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed">
@@ -84,4 +83,5 @@ $.getJSON("data.json", function(jsd) {
 
 </body>
 </html>
+
 {/body}
