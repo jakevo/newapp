@@ -1,9 +1,4 @@
-﻿{>"layout" /}
-
-
-
-{<body}
-
+﻿
 <!DOCTYPE html>
 <html>
 <head>
@@ -157,4 +152,4 @@
 </body>
 
 </html>
-{/body}
+

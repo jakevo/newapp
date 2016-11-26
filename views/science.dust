@@ -1,9 +1,3 @@
-{>"layout" /}
-
-
-
-{<body}
-
 
 <!DOCTYPE html>
 <html>
@@ -84,4 +78,3 @@ $.getJSON("data.json", function(jsd) {
 
 </body>
 </html>
-{/body}
