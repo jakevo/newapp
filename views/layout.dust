@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>Jake Vo</title>
+  <title>CITIZEN SCIENTIST </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -25,9 +25,6 @@
 
 </head>
 <body>
-  <div id="owner" style="text-align: center;">
-      {user}
-  </div>
 
   {+body /}
 

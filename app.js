@@ -150,9 +150,9 @@ app.post('/createP', function(req, res) {
     if(err) {
       return console.error('error fetching client from pool', err);
     }
-    client.query("INSERT INTO question (owner, projname, hypothesis, quest1, quest2, quest3, quest4, quest5) VALUES" +
-    "($1, $2, $3, $4, $5, $6, $7, $8)",
-    [name, req.body.pName, req.body.hypo, req.body.ques1,req.body.ques2,req.body.ques3,req.body.ques4,req.body.ques5]);
+    client.query("INSERT INTO question (owner, projname,category, hypothesis, quest1, quest2, quest3, quest4, quest5) VALUES" +
+    "($1, $2, $3, $4, $5, $6, $7, $8, $9)",
+    [name, req.body.pName, req.body.selectpicker, req.body.hypo, req.body.ques1,req.body.ques2,req.body.ques3,req.body.ques4,req.body.ques5]);
     done();
     res.render('home');
     if(err) {

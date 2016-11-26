@@ -4,6 +4,7 @@
 {<body}
 
 <script>
+
   function goBack() {
     window.history.back()
   };
@@ -74,11 +75,11 @@
           </b>
 
         </label>
-        <select id="category">
-          <option value="social">Social</option>
-          <option value="health">Health</option>
-          <option value="environment">Environment</option>
-          <option value="science">Science</option>
+        <select class="selectpicker" id="category" name="selectpicker">
+          <option value="Social">Social</option>
+          <option value="Health">Health</option>
+          <option value="Environment">Environment</option>
+          <option value="Science">Science</option>
         </select>
       </div>
 
