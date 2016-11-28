@@ -67,7 +67,6 @@
             <div data-role="navbar">
                 <ul>
                     <li><a href="/create" data-icon="plus">Create</a></li>
-                    <li><a href="/contribute" data-icon="edit">Contribute</a></li>
                     <li><a href="/analyze" data-icon="check">Analyze</a></li>
                     <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
                     <li><a href="/" data-icon="power">Logout</a></li>

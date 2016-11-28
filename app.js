@@ -153,18 +153,17 @@ app.post('/addUser', function(req, res) {
       //console.log(result.rows);
       //res.render('index');
       for (var i = 0; i < result.rows.length; i++) {
-        console.log(result.rows[i].email);
-        console.log(result.rows[i].password);
+        console.log("database " + result.rows[i].email);
+        console.log("database " + result.rows[i].password);
         console.log(req.body.logU);
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
           name = result.rows[i].email;
           return res.render('home', {user: result.rows[i].email});
-        } else {
-          return res.render('signin', {error: "Invalid Username/Password!"});
         }
       }
-      res.render('signin');
+      res.render('signin', {error: "Invalid Username/Password!"});
+
 
       //res.render('signin');
       done();
@@ -221,7 +220,7 @@ app.post('/display', function(req, res) {
     client.query("SELECT * FROM question where projname = $1",[temp], function(err, result) {
       res.render('project', {info: result.rows});
       done();
-      
+
     });
   });
 });

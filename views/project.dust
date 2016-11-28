@@ -11,7 +11,12 @@
         </a>
       </div>
 
-
+      <script>
+        function sub() {
+          alert("Thank you for your contribution!");
+          window.history.go(-1);
+        };
+      </script>
 <div role="main" class="ui-content">
 <br> <br> <br>
 <h2> Project:  {#info} {projname} {/info} </h2>
@@ -67,8 +72,9 @@
       </fieldset>
   </div>
 
+
   {/info}
-  <button onclick="history.back()">  SUBMIT </button>
+  <button onclick="sub()">  SUBMIT </button>
   <button onclick="history.back()">BACK</button>
 
 </div>

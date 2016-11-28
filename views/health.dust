@@ -37,7 +37,7 @@
         </div>
 
       </div>
-
+     <h2> <strong>Project List: </strong> </h2>
      {#project}
         <div class="well">
           <ul data-role="listview">
