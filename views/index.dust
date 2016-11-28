@@ -2,11 +2,11 @@
 
 {<body}
 <div data-role="page" data-control-title="index" id="page3">
-    <div data-theme="b" data-role="header" data-position="fixed">
-        <header onclick="window.location.href='/index'" class="ui-title">
+    <div data-theme="b" data-role="header" data-position="fixed" data-tap-toggle="false">
+        <header onclick="window.location.href='/'" class="ui-title">
             CITIZEN SCIENTIST
         </header>
-        <a onclick="window.location.href='/index'" data-transition="fade" data-icon="home">
+        <a onclick="window.location.href='/'" data-transition="fade" data-icon="home">
             Home
         </a>
     </div>
@@ -95,18 +95,15 @@
                     <br>
                     Connect with others with similar interests,
                     <br>
-                    and tackle questions that will
-                    revolutionize our human understanding!
+                    and tackle questions that will revolutionize our human understanding!
                     <br>
                 </span>
             </p>
         </div>
         <div data-role="navbar" data-iconpos="top">
-
-                    <a href="/signin" data-transition="fade" data-theme="" data-icon="">
-                        SIGN IN
-                    </a>
-
+            <a href="/signin" data-transition="fade" data-theme="" data-icon="">
+                SIGN IN
+            </a>
         </div>
         <div data-role="navbar">
             <a href="/signup" data-transition="fade" data-theme="" data-icon="">
@@ -115,6 +112,5 @@
         </div>
     </div>
 </div>
-
 
 {/body}
