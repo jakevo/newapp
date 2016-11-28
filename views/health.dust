@@ -1,20 +1,16 @@
 {>"layout" /}
 
-
-
 {<body}
 
-
 <div data-role="page" data-control-title="home" id="page1">
-    <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
-        <h1 onclick="window.location.href='/home'" class="ui-title">
+    <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left" data-tap-toggle="false">
+        <header onclick="window.location.href='/home'" class="ui-title">
             CITIZEN SCIENTIST
-        </h1>
+        </header>
         <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
             Home
         </a>
       </div>
-
 
     <div role="main" class="ui-content">
         <div data-controltype="textblock">
@@ -50,8 +46,6 @@
         </ul>
       </div>
       {/project}
-
-
 
         <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">

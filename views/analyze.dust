@@ -72,7 +72,7 @@
             <div data-controltype="textblock">
                 <p style="text-align: left;">
                     <b>
-                        HYPOTHESIS:
+                        HYPOTHESIS: 
                     </b>
                     Knowing when to prioritize will be one of the most popular responses.
                 </p>
@@ -93,7 +93,7 @@
             </div>
             <div data-controltype="textblock">
                 <p style="text-align: left;">
-                    If you selected
+                    If you selected 
                     <b>
                         No
                     </b>
@@ -128,7 +128,6 @@
                 <div data-role="navbar">
                     <ul>
                         <li><a href="/create" data-icon="plus">Create</a></li>
-                        <li><a href="/contribute" data-icon="edit">Contribute</a></li>
                         <li><a href="/analyze" data-icon="check" class="ui-btn-active ui-state-persist">Analyze</a></li>
                         <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
                         <li><a onclick="window.location.href='/index'" data-icon="power">Logout</a></li>

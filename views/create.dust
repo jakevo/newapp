@@ -23,15 +23,13 @@
 
   };
 
-
 </script>
 
-
 <div data-role="page" data-control-title="analyze" id="page8">
-  <div data-theme="b" data-role="header">
-    <h1 onclick="window.location.href='/home'" class="ui-title">
+  <div data-theme="b" data-role="header" data-tap-toggle="false">
+    <header onclick="window.location.href='/home'" class="ui-title">
       CITIZEN SCIENTIST
-    </h1>
+    </header>
     <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
       Home
     </a>
