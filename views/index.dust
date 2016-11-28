@@ -1,6 +1,3 @@
-{>"layout" /}
-
-{<body}
 
 <!DOCTYPE html>
 <html>
@@ -219,7 +216,3 @@ function showMonitor() {
 
 </body>
 </html>
-
-
-
-{/body}

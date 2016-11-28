@@ -1,8 +1,3 @@
-{>"layout" /}
-
-
-{<body}
-
 <script>
 
   function goBack() {
@@ -163,6 +158,3 @@
     </div><!-- /navbar -->
   </div><!-- /footer -->
 </div>
-
-
-{/body}
