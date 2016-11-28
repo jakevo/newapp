@@ -219,17 +219,9 @@ app.post('/display', function(req, res) {
     }
     var temp = req.body.projectID;
     client.query("SELECT * FROM question where projname = $1",[temp], function(err, result) {
-      //console.log(result.rows);
-      //res.render('index');
-
-      res.render('project', {info:  result.rows});
-
-      //res.render('signin');
+      res.render('project', {info: result.rows});
       done();
-
-      if(err) {
-        return console.error('error running query', err);
-      }
+      
     });
   });
 });

@@ -41,9 +41,11 @@
         </label>
         <input id="pwd" type="password" name="logP" value="javo" placeholder="Password" >
       </div>
+
       <div>
         {error}
       </div>
+
       <div data-role="navbar" data-iconpos="top">
         <ul>
           <li>

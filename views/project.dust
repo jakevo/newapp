@@ -1,0 +1,76 @@
+{>"layout" /}
+
+{<body}
+<div data-role="page" data-control-title="home" id="page1">
+    <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
+        <h1 onclick="window.location.href='/home'" class="ui-title">
+            CITIZEN SCIENTIST
+        </h1>
+        <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
+            Home
+        </a>
+      </div>
+
+
+<div role="main" class="ui-content">
+<br> <br> <br>
+<h2> Project:  {#info} {projname} {/info} </h2>
+<br> <br>
+  {#info}
+  <strong> Question 1 </strong> : {quest1}
+  <div class="ui-field-contain" data-controltype="checkboxes">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+          <label for="choice1">Yes</label>
+          <input type="radio" name="answer1" id="choice1" value="yes">
+          <label for="choice2">No</label>
+          <input type="radio" name="answer1" id="choice2" value="no">
+      </fieldset>
+  </div>
+
+  <strong> Question 2 </strong> : {quest2}
+  <div class="ui-field-contain" data-controltype="checkboxes">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+          <label for="choice3">Yes</label>
+          <input type="radio" name="answer2" id="choice3" value="yes">
+          <label for="choice4">No</label>
+          <input type="radio" name="answer2" id="choice4" value="no">
+      </fieldset>
+  </div>
+
+  <strong> Question 3 </strong>: {quest3}
+  <div class="ui-field-contain" data-controltype="checkboxes">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+          <label for="choice5">Yes</label>
+          <input type="radio" name="answer3" id="choice5" value="yes">
+          <label for="choice6">No</label>
+          <input type="radio" name="answer3" id="choice6" value="no">
+      </fieldset>
+  </div>
+
+  <strong> Question 4 </strong> : {quest4}
+  <div class="ui-field-contain" data-controltype="checkboxes">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+          <label for="choice7">Yes</label>
+          <input type="radio" name="answer4" id="choice7" value="yes">
+          <label for="choice8">No</label>
+          <input type="radio" name="answer4" id="choice8" value="no">
+      </fieldset>
+  </div>
+
+  <strong> Question 5 </strong> : {quest5}
+  <div class="ui-field-contain" data-controltype="checkboxes">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+          <label for="choice9">Yes</label>
+          <input type="radio" name="answer5" id="choice9" value="yes">
+          <label for="choice10">No</label>
+          <input type="radio" name="answer5" id="choice10" value="no">
+      </fieldset>
+  </div>
+
+  {/info}
+  <button onclick="history.back()">  SUBMIT </button>
+  <button onclick="history.back()">BACK</button>
+
+</div>
+</div>
+{/body}
