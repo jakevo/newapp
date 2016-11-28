@@ -52,14 +52,10 @@
         </div>
 
         <div align="center">
-        <img onclick=window.location.href='/social' src="images/social.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
-        <img onclick="window.location.href='/health'" src="images/health.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
-        <img onclick="window.location.href='/environment'" src="images/environment.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
-        <img onclick="window.location.href='/science'" src="images/science.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
+        <img onclick="window.location.href='/social'" src="images/social.png" alt="Social" width="45%" height="50%" style="border:3px; border-style: outset; border-color: black;">
+        <img onclick="window.location.href='/health'" src="images/health.png" alt="Health" width="45%" height="50%" style="border:3px; border-style: outset; border-color: black;">
+        <img onclick="window.location.href='/environment'" src="images/environment.png" alt="Environment" width="45%" height="50%" style="border:3px; border-style: outset; border-color: black;">
+        <img onclick="window.location.href='/science'" src="images/science.png" alt="Science" width="45%" height="50%" style="border:3px; border-style: outset; border-color: black;">
 
         </div>
 
