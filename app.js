@@ -16,7 +16,7 @@ var app = express();
 var html_dir = './html/';
 var connect = "postgres://wkffstrhlpupdr:DVb427-jc3Z7gnunzpVeA6XFji@ec2-54-221-244-62.compute-1.amazonaws.com:5432/d3vt508c43cdvj?ssl=true"
 var name;
-
+var check = false;
 //var pool = new pg.Pool(config);&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
 app.engine('dust', cons.dust);
 
@@ -32,20 +32,35 @@ app.use(express.bodyParser());
 
 app.use(bodyParser.urlencoded({ extended: true}));
 
-
 app.get('/create', function(req, res) {
   res.render('create', {user: name});
 });
 
 app.get('/social', function(req, res) {
-  res.render('social', {user: name});
+  pg.connect(connect, function (err, client, done) {
+    if(err) {
+      return console.error('error fetching client from pool', err);
+    }
+    client.query("SELECT * FROM question where category = 'Social'" , function(err, result) {
+
+      res.render('social', {project: result.rows});
+
+      done();
+
+      if(err) {
+        return console.error('error running query', err);
+      }
+    });
+  });
+  //res.render('social');
 });
 
 app.get('/', function(req, res) {
   res.render('index');
 });
 app.get('/home', function(req, res) {
-  res.render('home');
+    res.render('home');
+
 });
 app.get('/signin', function(req, res) {
 
@@ -72,10 +87,24 @@ app.get('/signup', function(req, res) {
 });
 
 app.get('/health', function(req, res) {
+  pg.connect(connect, function (err, client, done) {
+    if(err) {
+      return console.error('error fetching client from pool', err);
+    }
+    client.query("SELECT * FROM question where category = 'Health'" , function(err, result) {
 
-  res.render('health');
+      res.render('health', {project: result.rows, user: name});
 
+      done();
+
+      if(err) {
+        return console.error('error running query', err);
+      }
+    });
+  });
+  //res.render('social');
 });
+
 
 app.get('/science', function(req, res) {
 
@@ -89,17 +118,6 @@ app.get('/environment', function(req, res) {
 
 });
 
-app.get('/health', function(req, res) {
-
-  res.render('health');
-
-});
-
-app.get('/leyout', function(req, res) {
-
-  res.render('leyout');
-
-});
 
 app.get('/forgotpassword', function(req, res) {
 
@@ -127,6 +145,7 @@ app.post('/addUser', function(req, res) {
         console.log(req.body.logU);
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
+          check = true;
           name = result.rows[i].email;
           return res.render('home', {user: result.rows[i].email});
         }
@@ -174,7 +193,7 @@ app.post('/add', function(req, res) {
   });
 });
 /*app.listen(3000, function() {
-  console.log('Server Started On Port 3000');
+console.log('Server Started On Port 3000');
 });*/
 
 app.listen(process.env.PORT || 3000, function(){

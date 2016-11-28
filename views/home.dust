@@ -9,14 +9,14 @@
         <h1 onclick="window.location.href='/home'" class="ui-title">
             CITIZEN SCIENTIST
         </h1>
-        <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
+        <a href='/home' data-transition="fade" data-icon="home">
             Home
         </a>
 </div>
 
     <div role="main" class="ui-content">
         <div id="owner" style="text-align: center;">
-
+          {user}
         </div>
         <div data-controltype="textblock">
             <h2>
@@ -72,7 +72,7 @@
                     <li><a href="/contribute" data-icon="edit">Contribute</a></li>
                     <li><a href="/analyze" data-icon="check">Analyze</a></li>
                     <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
-                    <li><a onclick="window.location.href='/'" data-icon="power">Logout</a></li>
+                    <li><a href="/logout" data-icon="power">Logout</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->

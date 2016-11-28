@@ -2,15 +2,3 @@ body{
   margin-top:30px;
   background: #00cc66;
 }
-
-
-.btn {
-    text-align: left;
-}
-
-.button{
-    height:300px;
-    width:300px;
-    top:100%;
-    left:100%;
-}

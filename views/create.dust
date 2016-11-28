@@ -138,13 +138,13 @@
       <div data-role="navbar" data-iconpos="top">
         <ul>
           <li>
-            <a onclick="goBack()" data-transition="fade" data-theme="" data-icon="">
+            <a onclick="history.go(-1);" data-transition="fade" data-theme="" data-icon="">
               BACK
             </a>
           </li>
 
           <li>
-            <input type="submit" name="commit" value="Create" data-transition="fade" data-theme="" data-icon="">
+            <input type="submit" name="commit" value="CREATE" data-transition="fade" data-theme="" data-icon="">
           </li>
         </ul>
       </div>
