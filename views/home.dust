@@ -1,3 +1,6 @@
+{>"layout" /}
+
+{<body}
 
 <div data-role="page" data-control-title="home" id="page1">
     <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
@@ -67,10 +70,11 @@
                     <li><a href="/contribute" data-icon="edit">Contribute</a></li>
                     <li><a href="/analyze" data-icon="check">Analyze</a></li>
                     <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
-                    <li><a href="/logout" data-icon="power">Logout</a></li>
+                    <li><a href="/" data-icon="power">Logout</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
     </div>
 </div>
 
+{/body}

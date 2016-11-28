@@ -36,9 +36,15 @@
                  width="65%" height="65%">
         </div>
         {#project}
-         <div class="well">
-           Project Name: <a style="text-transform:uppercase">  {projname}</a>
-                         <h5>Created By: {owner} </h5>
+           <div class="well">
+             <ul data-role="listview">
+           <form id="myform" method="post" action="/display">
+                <input type="hidden" name="projectID" value="{projname}" />
+                        <li><a href="#" onclick="document.getElementById('myform').submit()">
+                          {projname}  </a></li>
+                          Creator: {owner}
+           </form>
+           </ul>
          </div>
          {/project}
 

@@ -16,7 +16,7 @@ var app = express();
 var html_dir = './html/';
 var connect = "postgres://wkffstrhlpupdr:DVb427-jc3Z7gnunzpVeA6XFji@ec2-54-221-244-62.compute-1.amazonaws.com:5432/d3vt508c43cdvj?ssl=true"
 var name;
-var check = false;
+
 //var pool = new pg.Pool(config);&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
 app.engine('dust', cons.dust);
 
@@ -58,6 +58,7 @@ app.get('/social', function(req, res) {
 app.get('/', function(req, res) {
   res.render('index');
 });
+
 app.get('/home', function(req, res) {
     res.render('home');
 
@@ -66,10 +67,9 @@ app.get('/signin', function(req, res) {
 
   res.render('signin');
 });
-app.get('/addUser', function(req, res) {
 
-  res.render('home');
-});
+
+
 
 app.get('/contribute', function(req,res) {
   res.render('contribute');
@@ -83,6 +83,12 @@ app.get('/analyze', function(req,res) {
 app.get('/signup', function(req, res) {
 
   res.render('signup');
+
+});
+
+app.get('/signin', function(req, res) {
+
+  res.render('signin');
 
 });
 
@@ -131,6 +137,13 @@ app.get('/myprojects', function(req, res) {
 
 });
 
+
+
+
+app.get('/addUser', function(req, res) {
+  res.render('home');
+
+});
 app.post('/addUser', function(req, res) {
   pg.connect(connect, function (err, client, done) {
     if(err) {
@@ -145,9 +158,10 @@ app.post('/addUser', function(req, res) {
         console.log(req.body.logU);
         console.log(req.body.logP);
         if (result.rows[i].email == req.body.logU && result.rows[i].password == req.body.logP) {
-          check = true;
           name = result.rows[i].email;
           return res.render('home', {user: result.rows[i].email});
+        } else {
+          return res.render('signin', {error: "Invalid Username/Password!"});
         }
       }
       res.render('signin');
@@ -195,6 +209,31 @@ app.post('/add', function(req, res) {
 /*app.listen(3000, function() {
 console.log('Server Started On Port 3000');
 });*/
+
+
+app.post('/display', function(req, res) {
+  pg.connect(connect, function (err, client, done) {
+    if(err) {
+      return console.error('error fetching client from pool', err);
+    }
+    var temp = req.body.projectID;
+    client.query("SELECT * FROM question where projname = $1",[temp], function(err, result) {
+      //console.log(result.rows);
+      //res.render('index');
+
+      res.render('project', {info:  result.rows});
+
+      //res.render('signin');
+      done();
+
+      if(err) {
+        return console.error('error running query', err);
+      }
+    });
+  });
+});
+
+
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode",
