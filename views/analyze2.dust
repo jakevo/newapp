@@ -87,7 +87,7 @@
             <div data-controltype="textblock">
                 <p style="text-align: left;">
                     <b>
-                        HYPOTHESIS:
+                        HYPOTHESIS: 
                     </b>
                     Knowing when to prioritize will be one of the most popular responses.
                 </p>
@@ -97,7 +97,9 @@
             <div class="ui-field-contain" data-controltype="checkboxes">
                 <fieldset data-role="controlgroup" data-type="horizontal">
                     <legend>
+                    <h4>
                         Does the data support the given Hypothesis?
+                    </h4>
                     </legend>
                     <label for="choice1">Yes</label>
                     <input type="radio" name="answer" id="choice1" value="yes">

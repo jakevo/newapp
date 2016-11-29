@@ -89,7 +89,7 @@
                     <b>
                         HYPOTHESIS: 
                     </b>
-                    Knowing when to prioritize will be one of the most popular responses.
+                     Most people use a method to organize their time.
                 </p>
             </div>
             <h4> Data From Survey Responses </h4>
@@ -97,7 +97,9 @@
             <div class="ui-field-contain" data-controltype="checkboxes">
                 <fieldset data-role="controlgroup" data-type="horizontal">
                     <legend>
+                    <h4>
                         Does the data support the given Hypothesis?
+                    </h4>
                     </legend>
                     <label for="choice1">Yes</label>
                     <input type="radio" name="answer" id="choice1" value="yes">
