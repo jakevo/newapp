@@ -1,29 +1,9 @@
-<script>
+{>"layout" /}
 
-  function goBack() {
-    window.history.back()
-  };
 
-  function validate() {
-    var projectName = document.getElementById("pName");
-    var hypothesis = document.getElementById("hypo");
-    var question1 = document.getElementById("ques1");
-    var question2 = document.getElementById("ques2");
-    var question3 = document.getElementById("ques3");
-    var question3 = document.getElementById("ques4");
-    var question4 = document.getElementById("ques5");
+{<body}
 
-    var e = document.getElementById("category");
-    var category = e.options[e.selectedIndex].value;
 
-    if ((projectName.value = "") || (hypothesis.value = "")) {
-      alert("Project name and Hypothesis fields cannot be blank!");
-      return false;
-    }
-
-  };
-
-</script>
 
 <div data-role="page" data-control-title="analyze" id="page8">
   <div data-theme="b" data-role="header" data-tap-toggle="false">
@@ -34,6 +14,35 @@
       Home
     </a>
   </div>
+
+  <script>
+
+    function goBack() {
+      window.history.back()
+    };
+
+    function validate() {
+      var projectName = document.getElementById("pName");
+      var hypothesis = document.getElementById("hypo");
+      var question1 = document.getElementById("ques1");
+      var question2 = document.getElementById("ques2");
+      var question3 = document.getElementById("ques3");
+      var question4 = document.getElementById("ques4");
+      var question5 = document.getElementById("ques5");
+
+      var e = document.getElementById("category");
+      var category = e.options[e.selectedIndex].value;
+
+      if ((projectName.value == "") || (hypothesis.value == "") || (question1.value == "") || (question2.value = "") ||
+      (question3.value =="") || (question4.value == "") || (question5.value == "")) {
+        alert("Please fill all the fields!");
+        return false;
+      }
+
+    };
+
+
+  </script>
   <div role="main" class="ui-content">
     <div data-controltype="textblock">
       <h1 data-mce-style="text-align: center;" style="text-align: center;">
@@ -50,7 +59,7 @@
           </b>
       </h4>
     </div>
-    <form method="post" action="/createP">
+    <form method="post" action="/createP" onsubmit="return validate();">
       <div class="ui-field-contain" data-controltype="textinput">
         <label for="textinput1">
           <b>
@@ -144,10 +153,13 @@
     <div data-role="navbar">
       <ul>
         <li><a href="/create" data-icon="plus" class="ui-btn-active ui-state-persist">Create</a></li>
+
         <li><a href="/analyze" data-icon="check">Analyze</a></li>
         <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
-        <li><a href="/index" data-icon="power">Logout</a></li>
+        <li><a href="/" data-icon="power">Logout</a></li>
       </ul>
     </div><!-- /navbar -->
   </div><!-- /footer -->
 </div>
+
+{/body}

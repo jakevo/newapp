@@ -15,7 +15,7 @@
 
     <div role="main" class="ui-content">
         <div id="owner" style="text-align: center;">
-
+          {user}
         </div>
         <div data-controltype="textblock">
             <h2>
@@ -40,10 +40,8 @@
            <div class="well">
              <ul data-role="listview">
            <form id="myform" method="post" action="/display">
-                <input type="hidden" name="projectID" value="{projname}" />
-                        <li><a href="#" onclick="document.getElementById('myform').submit()">
-                          {projname}  </a></li>
-                          Creator: {owner}
+                <button type="submit" name="projectID" value="{projname}"> {projname} <br> <h5>Creator: {owner}</h5></button>
+
            </form>
            </ul>
          </div>
@@ -52,6 +50,7 @@
         <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
+
                     <li><a href="/create" data-icon="plus">Create</a></li>
                     <li><a href="/analyze" data-icon="check">Analyze</a></li>
                     <li><a href="/myprojects" data-icon="gear">My Projects</a></li>

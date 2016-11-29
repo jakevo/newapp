@@ -21,10 +21,10 @@
                     </span>
                 </h1>
                 <h4 data-mce-style="text-align: center;" style="text-align: center;">
-                    
-                        
+
+
                             ANALYZE DATA FROM OTHER PROJECTS
-                        
+
                     </span>
                 </h4>
             </div>
@@ -87,7 +87,7 @@
             <div data-controltype="textblock">
                 <p style="text-align: left;">
                     <b>
-                        HYPOTHESIS: 
+                        HYPOTHESIS:
                     </b>
                     Knowing when to prioritize will be one of the most popular responses.
                 </p>
@@ -107,7 +107,7 @@
             </div>
             <div data-controltype="textblock">
                 <p style="text-align: left;">
-                    If you selected 
+                    If you selected
                     <b>
                         No
                     </b>
@@ -150,17 +150,7 @@
             </div><!-- /footer -->
         </div>
     </div>
-    <script>
+</body>
 
-        $(function () {
-        });
-
-        $(document).ready(function () {
-            $("#sub").click(function () {
-                $("#response1").show();
-            });
-        });
-
-    </script>
+</html>
 {/body}
-

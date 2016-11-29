@@ -43,7 +43,7 @@ app.get('/social', function(req, res) {
     }
     client.query("SELECT * FROM question where category = 'Social'" , function(err, result) {
 
-      res.render('social', {project: result.rows});
+      res.render('social', {project: result.rows, user: name});
 
       done();
 
@@ -56,41 +56,27 @@ app.get('/social', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-  res.render('index');
+  res.render('index',{user: name});
 });
 
 app.get('/home', function(req, res) {
-    res.render('home');
+    res.render('home',{user: name});
 
 });
 app.get('/signin', function(req, res) {
 
-  res.render('signin');
+  res.render('signin',{user: name});
 });
 
 
-
-
-app.get('/contribute', function(req,res) {
-  res.render('contribute');
-});
-
-app.get('/analyze', function(req,res) {
-  res.render('analyze');
-});
 
 
 app.get('/signup', function(req, res) {
 
-  res.render('signup');
+  res.render('signup',{user: name});
 
 });
 
-app.get('/signin', function(req, res) {
-
-  res.render('signin');
-
-});
 
 app.get('/health', function(req, res) {
   pg.connect(connect, function (err, client, done) {
@@ -114,27 +100,32 @@ app.get('/health', function(req, res) {
 
 app.get('/science', function(req, res) {
 
-  res.render('science');
+  res.render('science',{user: name});
 
 });
 
 app.get('/environment', function(req, res) {
 
-  res.render('environment');
+  res.render('environment',{user: name});
 
 });
 
 
 app.get('/forgotpassword', function(req, res) {
 
-  res.render('forgotpassword');
+  res.render('forgotpassword',{user: name});
 
 });
 
 app.get('/myprojects', function(req, res) {
 
-  res.render('myprojects');
+  res.render('myprojects',{user: name});
 
+});
+
+app.get('/analyze', function(req, res) {
+
+  res.render('analyze',{user: name});
 });
 
 app.get('/data', function(req, res) {
@@ -146,7 +137,7 @@ app.get('/data', function(req, res) {
 
 
 app.get('/addUser', function(req, res) {
-  res.render('home');
+  res.render('home',{user: name});
 
 });
 app.post('/addUser', function(req, res) {
@@ -191,7 +182,7 @@ app.post('/createP', function(req, res) {
     "($1, $2, $3, $4, $5, $6, $7, $8, $9)",
     [name, req.body.pName, req.body.selectpicker, req.body.hypo, req.body.ques1,req.body.ques2,req.body.ques3,req.body.ques4,req.body.ques5]);
     done();
-    res.render('home');
+    res.render('home', {user: name});
     if(err) {
       return console.error('error running query', err);
     }
@@ -215,17 +206,15 @@ console.log('Server Started On Port 3000');
 });*/
 
 
-
 app.post('/display', function(req, res) {
   pg.connect(connect, function (err, client, done) {
     if(err) {
       return console.error('error fetching client from pool', err);
     }
-    var temp = req.body.projectID;
-    client.query("SELECT * FROM question where projname = $1",[temp], function(err, result) {
-      res.render('project', {info: result.rows});
+    console.log(req.body.projectID);
+    client.query("SELECT * FROM question where projname = $1",[req.body.projectID], function(err, result) {
+      res.render('project', {info: result.rows, user: name});
       done();
-
     });
   });
 });
