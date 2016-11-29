@@ -33,7 +33,7 @@
                     <b>
                         Project Name: &nbsp;
                     </b>
-                    Citizen Science Time (CSTIME)
+                    College Student Health
                 </p>
             </div>
             <div style="text-align: center;" data-controltype="textblock">
@@ -41,7 +41,7 @@
                     <b>
                         Owner: &nbsp;
                     </b>
-                    {user}
+                    rmontgomery@gamil.edu
                 </p>
             </div>
             <div data-controltype="textblock">
@@ -49,7 +49,7 @@
                     <b>
                         QUESTION 1: &nbsp;
                     </b>
-                    Do you take time to organize your time?
+                    Do you get more than 6 hours of sleep?
                 </p>
             </div>
             <div data-controltype="textblock">
@@ -57,7 +57,7 @@
                     <b>
                         QUESTION 2: &nbsp;
                     </b>
-                    Do you use a strategy to manage your time?
+                    Do you eat vegetables at least three times per week?
                 </p>
             </div>
             <div data-controltype="textblock">
@@ -65,7 +65,7 @@
                     <b>
                         QUESTION 3: &nbsp;
                     </b>
-                    Do you use a paper tool?
+                    Do you drink at least 4 cups of water per day?
                 </p>
             </div>
             <div data-controltype="textblock">
@@ -73,7 +73,7 @@
                     <b>
                         QUESTION 4: &nbsp;
                     </b>
-                    Do you use an electronic tool on your laptop or phone?
+                    Do you walk more than a mile per day?
                 </p>
             </div>
             <div data-controltype="textblock">
@@ -81,7 +81,7 @@
                     <b>
                         QUESTION 5: &nbsp;
                     </b>
-                    Do you use a tool that links over different mediums?
+                    Do you take study breaks?
                 </p>
             </div>
             <div data-controltype="textblock">
@@ -89,11 +89,11 @@
                     <b>
                         HYPOTHESIS: 
                     </b>
-                     Most people use a method to organize their time.
+                    Knowing when to prioritize will be one of the most popular responses.
                 </p>
             </div>
             <h4> Data From Survey Responses </h4>
-            <img src="images/analyze.png" alt="Data From Survey Responses" width="100%" height="100%">
+            <img src="images/analyze2.png" alt="Data From Survey Responses" width="100%" height="100%">
             <div class="ui-field-contain" data-controltype="checkboxes">
                 <fieldset data-role="controlgroup" data-type="horizontal">
                     <legend>
@@ -120,12 +120,12 @@
             <div data-role="navbar" data-iconpos="top">
                 <ul>
                     <li>
-                        <a onclick="window.location.href='/analyze2'" data-transition="fade" data-theme="" data-icon="">
+                        <a onclick="window.location.href='/analyze'" data-transition="fade" data-theme="" data-icon="">
                             SKIP THIS PROJECT
                         </a>
                     </li>
                     <li>
-                        <a onclick="window.location.href='/analyze2'" data-transition="fade" data-theme="" data-icon="">
+                        <a onclick="window.location.href='/analyze'" data-transition="fade" data-theme="" data-icon="">
                             SUBMIT AND GO TO NEXT PROJECT
                         </a>
                     </li>

@@ -1,0 +1,112 @@
+﻿{>"layout" /}
+
+{<body}
+
+<div data-role="page" data-control-title="answer" id="page7">
+    <div data-theme="b" data-role="header" data-position="fixed" data-tap-toggle="false">
+        <header onclick="window.location.href='home.html'" class="ui-title">
+            CITIZEN SCIENTIST
+        </header>
+		<a onclick="window.location.href='/'" data-transition="fade" data-icon="home">
+            Home
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <h1 data-mce-style="text-align: center;" style="text-align: center;">
+                 <span style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;">
+                    <b>
+                        MY PROJECTS
+                    </b>
+                </span>
+            </h1>
+
+            <h4 data-mce-style="text-align: center;" style="text-align: center;">
+                    <b>
+                       Citizen Science Time (CSTIME) Data and Analysis
+                    </b>
+            </h4>
+        </div>
+    <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 1: &nbsp;
+                    </b>
+                    Do you take time to organize your time?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 2: &nbsp;
+                    </b>
+                    Do you use a strategy to manage your time?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 3: &nbsp;
+                    </b>
+                    Do you use a paper tool?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 4: &nbsp;
+                    </b>
+                    Do you use an electronic tool on your laptop or phone?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 5: &nbsp;
+                    </b>
+                    Do you use a tool that links over different mediums?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p style="text-align: left;">
+                    <b>
+                        HYPOTHESIS: 
+                    </b>
+                    Most people use a method to organize their time.
+                </p>
+            </div>
+            <h4> Data From Survey Responses </h4>
+            <img src="images/analyze.png" alt="Data From Survey Responses" width="100%" height="100%">
+        <div role="main" class="ui-content">
+          <h4> Data From People Analyzing Results For This Project </h4>
+        </div>
+  <h5> People Who Believe Data Supports Hypothesis: 50 </h5>
+  <h5> People Who Do Not Believe Data Supports Hypothesis: 37 </h5>
+        <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a onclick="window.location.href='/myprojects'" data-transition="fade" data-theme="" data-icon="">
+                            BACK
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="window.location.href='/home'" data-transition="fade" data-theme="" data-icon="">
+                            HOME
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="/create" data-icon="plus">Create</a></li>
+                        <li><a href="/analyze" data-icon="check" class="ui-btn-active ui-state-persist">Analyze</a></li>
+                        <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
+                        <li><a onclick="window.location.href='/'" data-icon="power">Logout</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+</div>
+
+{/body}
