@@ -14,9 +14,6 @@
     </div>
 
     <div role="main" class="ui-content">
-        <div id="owner" style="text-align: center;">
-          {user}
-        </div>
         <div data-controltype="textblock">
             <h2>
             <p style="text-align: center;" data-mce-style="text-align: center;" >
@@ -54,7 +51,7 @@
                     <li><a href="/create" data-icon="plus">Create</a></li>
                     <li><a href="/analyze" data-icon="check">Analyze</a></li>
                     <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
-                    <li><a href="/?h?0te$" data-icon="power">Logout</a></li>
+                    <li><a href="/" data-icon="power">Logout</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->

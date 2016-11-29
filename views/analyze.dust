@@ -41,7 +41,7 @@
                     <b>
                         Owner: &nbsp;
                     </b>
-                    javo@ucsd.edu
+                    {user}
                 </p>
             </div>
             <div data-controltype="textblock">

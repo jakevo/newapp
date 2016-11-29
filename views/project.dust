@@ -3,9 +3,9 @@
 {<body}
 <div data-role="page" data-control-title="home" id="page1">
     <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
-        <h1 onclick="window.location.href='/home'" class="ui-title">
+        <header onclick="window.location.href='/home'" class="ui-title">
             CITIZEN SCIENTIST
-        </h1>
+        </header>
         <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
             Home
         </a>
