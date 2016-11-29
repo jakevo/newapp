@@ -14,7 +14,7 @@
 
     <div role="main" class="ui-content">
         <div id="owner" style="text-align: center;">
-          {user}
+          Hello {user}
         </div>
         <div data-controltype="textblock">
             <h2>
