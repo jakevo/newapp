@@ -47,9 +47,41 @@
             <div data-controltype="textblock">
                 <p>
                     <b>
-                        QUESTION: &nbsp;
+                        QUESTION 1: &nbsp;
                     </b>
                     What is the best strategy for people to manage their time?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 2: &nbsp;
+                    </b>
+                    Do you use a strategy to manage your time?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 3: &nbsp;
+                    </b>
+                    Do you use a paper tool?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 4: &nbsp;
+                    </b>
+                    Do you use an electronic tool on your laptop or phone?
+                </p>
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <b>
+                        QUESTION 5: &nbsp;
+                    </b>
+                    Do you use a tool that links over different mediums?
                 </p>
             </div>
             <div data-controltype="textblock">
