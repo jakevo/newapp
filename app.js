@@ -133,6 +133,11 @@ app.get('/analyze2', function(req, res) {
   res.render('analyze2',{user: name});
 });
 
+app.get('/timeData', function (req, res) {
+
+    res.render('timeData', { user: name });
+});
+
 app.get('/data', function(req, res) {
 
   res.render('data');
