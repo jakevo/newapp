@@ -24,9 +24,9 @@
 
 <div data-role="page" data-control-title="answer" id="page7">
     <div data-theme="b" data-role="header">
-        <h1 onclick="window.location.href='/home'" class="ui-title">
+        <header onclick="window.location.href='/home'" class="ui-title">
             CITIZEN SCIENTIST
-        </h1>
+        </header>
         <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
             Home
         </a>
@@ -91,14 +91,13 @@
                 </li>
             </ul>
         </div>
-        <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed">
+        <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
                     <li><a href="/create" data-icon="plus">Create</a></li>
-                    <li><a href="/contribute" data-icon="edit">Contribute</a></li>
                     <li><a href="/analyze" data-icon="check">Analyze</a></li>
                     <li><a href="/myprojects" data-icon="gear" class="ui-btn-active ui-state-persist">My Projects</a></li>
-                    <li><a onclick="window.location.href='/index'" data-icon="power">Logout</a></li>
+                    <li><a href="/" data-icon="power">Logout</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
@@ -116,4 +115,3 @@ function popup() {
 
 </body>
 </html>
-

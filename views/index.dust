@@ -1,12 +1,12 @@
 {>"layout" /}
 
 {<body}
-<div data-role="page" data-control-title="index" id="page3">
-    <div data-theme="b" data-role="header" data-position="fixed">
-        <header onclick="window.location.href='/index'" class="ui-title">
+<div data-role="page" data-control-title="index">
+    <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
+        <header class="ui-title">
             CITIZEN SCIENTIST
         </header>
-        <a onclick="window.location.href='/index'" data-transition="fade" data-icon="home">
+        <a href='/home' data-transition="fade" data-icon="home">
             Home
         </a>
     </div>

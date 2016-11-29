@@ -210,17 +210,15 @@ console.log('Server Started On Port 3000');
 });*/
 
 
-
 app.post('/display', function(req, res) {
   pg.connect(connect, function (err, client, done) {
     if(err) {
       return console.error('error fetching client from pool', err);
     }
-    var temp = req.body.projectID;
-    client.query("SELECT * FROM question where projname = $1",[temp], function(err, result) {
+    console.log(req.body.projectID);
+    client.query("SELECT * FROM question where projname = $1",[req.body.projectID], function(err, result) {
       res.render('project', {info: result.rows});
       done();
-
     });
   });
 });
