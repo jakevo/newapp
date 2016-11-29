@@ -16,7 +16,6 @@ var app = express();
 var html_dir = './html/';
 var connect = "postgres://wkffstrhlpupdr:DVb427-jc3Z7gnunzpVeA6XFji@ec2-54-221-244-62.compute-1.amazonaws.com:5432/d3vt508c43cdvj?ssl=true"
 var name;
-var projectID;
 //var pool = new pg.Pool(config);&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
 app.engine('dust', cons.dust);
 
@@ -240,7 +239,6 @@ app.post('/display', function(req, res) {
     }
 
     client.query("SELECT * FROM question where projname = $1",[req.body.projectID], function(err, result) {
-      projectID = req.body.projectID;
       res.render('project', {info: result.rows, user: name});
       done();
     });
