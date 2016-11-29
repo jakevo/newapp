@@ -46,19 +46,17 @@
   <div role="main" class="ui-content">
     <div data-controltype="textblock">
       <h1 data-mce-style="text-align: center;" style="text-align: center;">
-        <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+         <span style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;">
           <b>
             CREATE NEW PROJECT
           </b>
-        </span>
+          </span>
       </h1>
 
       <h4 data-mce-style="text-align: center;" style="text-align: center;">
-        <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
           <b>
             MAKE A NEW PROJECT FOR A NEW SCIENTIFIC QUESTION
           </b>
-        </span>
       </h4>
     </div>
     <form method="post" action="/createP" onsubmit="return validate();">
