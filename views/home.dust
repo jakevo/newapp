@@ -3,77 +3,70 @@
 {<body}
 
 <div data-role="page" data-control-title="index">
-    <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
-        <header class="ui-title">
-            CITIZEN SCIENTIST
-        </header>
-        <a href='/home' data-transition="fade" data-icon="home">
-            Home
-        </a>
+  <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
+    <header class="ui-title">
+      CITIZEN SCIENTIST
+    </header>
+    <a onclick="window.location.href='/home'" data-transition="fade" data-icon="home">
+      Home
+    </a>
+  </div>
+  <div role="main" class="ui-content">
+    <div id="owner" style="text-align: center;">
+      Hello {user}
+    </div>
+    <div data-controltype="textblock">
+      <h2>
+        <p style="text-align: center;" data-mce-style="text-align: center;" >
+          <span style="font-family: impact, chicago;" data-mce-style="font-family: impact, chicago;">
+            <strong>
+              <span style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;"> ﻿﻿
+                Welcome CITIZEN SCIENTIST
+              </span>
+            </strong>
+          </span>
+          <br>
+        </p>
+      </h2>
+    </div>
+    <div data-controltype="textblock">
+      <p style="text-align: center;" >
+        Engage in existing Research Projects you find interesting or create your own Research Project!
+      </p>
+    </div>
+    <div data-controltype="textblock">
+      <p style="text-align: center;" >
+        All the tools you need are at your fingertips, become a Scientist and tackle questions of all sorts!
+      </p>
     </div>
 
-    <div role="main" class="ui-content">
-        <div id="owner" style="text-align: center;">
-          Hello {user}
-        </div>
-        <div data-controltype="textblock">
-            <h2>
-            <p style="text-align: center;" data-mce-style="text-align: center;" >
-                <span style="font-family: impact, chicago;" data-mce-style="font-family: impact, chicago;">
-                    <strong>
-                        <span style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;"> ﻿﻿
-                             Welcome CITIZEN SCIENTIST
-                        </span>
-                    </strong>
-                </span>
-                <br>
-            </p>
-            </h2>
-        </div>
- <div data-controltype="textblock">
-            <p style="text-align: center;" >
-                        Engage in existing Research Projects you find interesting or create your own Research Project!
-            </p>
-        </div>
- <div data-controltype="textblock">
-            <p style="text-align: center;" >
-                        All the tools you need are at your fingertips, become a Scientist and tackle questions of all sorts!
-            </p>
-        </div>
 
-
-        <div data-controltype="textblock">
-
-          <b>
-            <p style="text-align: center;" >
-              Select a Project Category
-            </p>
-          </b>
-        </div>
-
-        <div align="center">
-        <img onclick=window.location.href='/social' src="images/social.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
-        <img onclick="window.location.href='/health'" src="images/health.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
-        <img onclick="window.location.href='/environment'" src="images/environment.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
-        <img onclick="window.location.href='/science'" src="images/science.png" alt="Data From Survey Responses"
-                 width="45%" height="50%">
-
-        </div>
-
-        <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="/create" data-icon="plus" >Create</a></li>
-                    <li><a href="/analyze" data-icon="check">Analyze</a></li>
-                    <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
-                    <li><a href="/" data-icon="power">Logout</a></li>
-                </ul>
-            </div><!-- /navbar -->
-        </div><!-- /footer -->
+    <div data-controltype="textblock">
+      <b>
+        <p style="text-align: center;" >
+          Select a Project Category
+        </p>
+      </b>
     </div>
+
+    <div align="center">
+      <img onclick="window.location.href='/social'" src="images/social.png" alt="Social" width="45%" height="50%" style="border:1px; border-style: outset; border-color: black;">
+      <img onclick="window.location.href='/health'" src="images/health.png" alt="Health" width="45%" height="50%" style="border:1px; border-style: outset; border-color: black;">
+      <img onclick="window.location.href='/environment'" src="images/environment.png" alt="Environment" width="45%" height="50%" style="border:1px; border-style: outset; border-color: black;">
+      <img onclick="window.location.href='/science'" src="images/science.png" alt="Science" width="45%" height="50%" style="border:1px; border-style: outset; border-color: black;">
+
+    </div>
+
+    <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="/create" data-icon="plus" >Create</a></li>
+          <li><a href="/analyze" data-icon="check">Analyze</a></li>
+          <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
+          <li><a href="/" data-icon="power">Logout</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div><!-- /footer -->
+  </div>
 </div>
-
 {/body}

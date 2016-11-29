@@ -1,12 +1,12 @@
 {>"layout" /}
 
 {<body}
-<div data-role="page" data-control-title="index">
-    <div data-theme="b" data-role="header" data-position="fixed" data-iconpos="left">
-        <header class="ui-title">
+<div data-role="page" data-control-title="index" id="page3">
+    <div data-theme="b" data-role="header" data-position="fixed" data-tap-toggle="false">
+        <header onclick="window.location.href='/'" class="ui-title">
             CITIZEN SCIENTIST
         </header>
-        <a href='/home' data-transition="fade" data-icon="home">
+        <a onclick="window.location.href='/'" data-transition="fade" data-icon="home">
             Home
         </a>
     </div>
@@ -14,9 +14,9 @@
     <div role="main" class="ui-content">
 
     <h3 data-mce-style="text-align: center;" style="text-align: center;">
-        <span style="font-family: 'Times New Roman'; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+
             <b>
-                FEATURES
+                Welcome Citizen Scientists!
             </b>
         </span>
     </h3>
@@ -24,17 +24,8 @@
         <div class="container">
             <br>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
-
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-
                     <div class="item active">
                         <img src="/images/slide1.png" alt="Chania" width="100%" height="100%">
                         <div class="carousel-caption">
@@ -77,7 +68,7 @@
                 <span>
                     <strong>
                         <span>
-                            Welcome Citizen Scientist!&nbsp;
+                            Features &nbsp;
                         </span>
                     </strong>
                 </span>
@@ -95,26 +86,22 @@
                     <br>
                     Connect with others with similar interests,
                     <br>
-                    and tackle questions that will
-                    revolutionize our human understanding!
-                    <br>
+                    and tackle questions that will revolutionize our human understanding!
                 </span>
             </p>
-        </div>
-        <div data-role="navbar" data-iconpos="top">
+        </div> ﻿﻿
+        <div data-role="navbar" data-iconpos="top" >
+            <a href="/signin" data-transition="fade" data-theme="" data-icon="" style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;">
 
-                    <a href="/signin" data-transition="fade" data-theme="" data-icon="">
-                        SIGN IN
-                    </a>
-
+                SIGN IN
+            </a>
         </div>
         <div data-role="navbar">
-            <a href="/signup" data-transition="fade" data-theme="" data-icon="">
+            <a href="/signup" data-transition="fade" data-theme="" data-icon="" style="color: rgb(32,178,170);" data-mce-style="color: #20b2aa;">
                 SIGN UP
             </a>
         </div>
     </div>
 </div>
-
 
 {/body}
