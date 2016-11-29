@@ -128,15 +128,13 @@ app.get('/myprojects', function(req, res) {
 
 });
 
-<<<<<<< HEAD
 app.get('/analyze', function(req, res) {
 
   res.render('analyze',{user: name});
-=======
+
 app.get('/data', function(req, res) {
 
   res.render('data');
->>>>>>> 75bef7b188c85eadb3e38d534f4439b1a3eaa7b7
 
 });
 
