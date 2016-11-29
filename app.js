@@ -77,11 +77,6 @@ app.get('/signup', function(req, res) {
 
 });
 
-app.get('/signin', function(req, res) {
-
-  res.render('signin',{user: name});
-
-});
 
 app.get('/health', function(req, res) {
   pg.connect(connect, function (err, client, done) {
@@ -131,6 +126,7 @@ app.get('/myprojects', function(req, res) {
 app.get('/analyze', function(req, res) {
 
   res.render('analyze',{user: name});
+});
 
 app.get('/data', function(req, res) {
 
